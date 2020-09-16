@@ -1,0 +1,17 @@
+#3.Исходные данные
+dfLab <- read.csv("FGLab.csv", stringsAsFactors = F,row.names = 1)
+dfLab
+#3.1). Сотрудницы, их имя и рост
+dfLab1 <- dfLab[dfLab$Пол == "жен", c("Имя", "Рост"), ]
+dfLab1
+#3.2). Фрейм!!!с именами всех сотрудников, кроме 7 и 8
+dfLab2 <- dfLab[1:6, "Имя",drop = FALSE]
+dfLab2
+#3.3). Подсчитат средний рост сотрудников-мужчин
+sred <- dfLab[dfLab$Пол == "муж", "Рост"]
+mean(sred)
+#3.4). Определите имя самого молодого сотрудника-женщины
+m <- min(dfLab$Возраст)
+molod <- dfLab[dfLab$Пол == "жен" & dfLab$Возраст == m, "Имя"]
+molod
+

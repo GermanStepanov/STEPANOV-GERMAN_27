@@ -1,4 +1,4 @@
-#4.1 С помощью функции data() загрузите встроенный набор данных:warpbreaks 
+##4.1 С помощью функции data() загрузите встроенный набор данных:warpbreaks 
 data(InsectSprays)
 
 
@@ -8,7 +8,7 @@ data(InsectSprays)
 
 #4.3  Изучите структуру фрейма данных с помощью функции str(). Сколько
 #в нём числовых столбцов? Есть ли переменные-факторы? . 
-#272 obs. of  2 variables.
+#72 obs. of  2 variables.
 str(InsectSprays)
 
 
@@ -24,7 +24,7 @@ r <- colnames(InsectSprays)
 
 
 #4.6 Оставьте во фрейме только столбцы с количественными показателями. 
-InsectSprays[,sapply(InsectSprays,is.numeric)]
+InsectSprays[,sapply(InsectSprays,is.numeric),drop = FALSE]
 
 
 #4.7). Рассчитайте коэффициенты вариации и среднее квартильное расстояние по каждому столбцу получившегося фрейма

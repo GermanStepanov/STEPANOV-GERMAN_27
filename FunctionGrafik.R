@@ -1,5 +1,5 @@
-library(Cairo)
-FunctionGrafik <- function(rt, N){
+library(Cairo)#библиотека
+FunctionGrafik <- function(rt, N){#задаем имя и параметры функции
   
   n <- 27-номер варианта 
   

@@ -1,7 +1,7 @@
-library(Cairo)
-StatisticGraf <- function(rt, N){
-  n <- 27
-  number <- 300
+library(Cairo)#библеотека
+StatisticGraf <- function(rt, N){#задаем имя и параметры функции
+  n <- 27#вариант 
+  number <- 300# количество данных
   #6. Исходные данные из упражнения 5
   set.seed(n)
   x <- rt(number, rt[1], rt[2]) #Закон распределения Стьюдента х

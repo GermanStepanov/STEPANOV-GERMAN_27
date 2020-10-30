@@ -30,14 +30,14 @@ StatisticGraf <- function(rt, N){
   
   dev.off() #закрыть поток вывода в файл
   
-  xmean <- sum(x)/length(x)
-  x2 <- x^2
-  Dx <- sum(x2)/length(x) - xmean^2
+  xmean <- sum(x)/length(x)# находим среднее х
+  x2 <- x^2#возведем значения в квадрат и сохраним в переменную 
+  Dx <- sum(x2)/length(x) - xmean^2# посчитаем дисперсию х
   #y
-  ymean <- sum(y)/length(y)
-  y2 <- y^2
-  Dy <- sum(y2)/length(y) - ymean^2
+  ymean <- sum(y)/length(y)# находим среднее y
+  y2 <- y^2#возведем значения в квадрат и сохраним в переменную 
+  Dy <- sum(y2)/length(y) - ymean^2#посчитаем дисперсию y
   #Построим фрейм с данными
-  dfDisperssion <- data.frame(Name = c("x", "y"), D = c(Dx, Dy))
-  dfDisperssion
+  dfDisperssion <- data.frame(Name = c("x", "y"), D = c(Dx, Dy))#фрейм состоящий из названий векторов переменных и их дисперсий 
+  dfDisperssion#вывод фрейма
 }

@@ -178,7 +178,7 @@ pic.num <- pic.num + 1
 
 fit.1.fo <- lm(SREDDENDOXOD2012 ~ FO * Y.ORTorg.2012, 
             data = reg.df) 
-kable(round(summary(fit.1.fo)$coef, 4))
+kable(round(summary(fit.1.fo)$coef, 2))
 #summary(fit.1.fo)
 table.num <- table.num + 1
 
